@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom'
-import PostList from './components/PostList'
-import PostPage from './pages/PostPage'
+import PostList from './components/PostList/PostList'
+import PostPage from './pages/PostPage/PostPage'
 
 const App :React.FC = () => {
   

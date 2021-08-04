@@ -1,0 +1,19 @@
+.post{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.img{
+  width: 500px;
+  margin-right:  20px;
+}
+
+.comment{
+  margin: 15px 0;
+}
+
+.title{
+  width: 400px;
+}

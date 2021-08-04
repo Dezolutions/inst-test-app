@@ -1,9 +1,9 @@
 export type TPost = {
   id: number,
+  media_url: string,
   like_count?: number,
   comments_count?: number,
-  caption?: string,
-  comments?: []
+  caption?: string
 }
 
 export type TComment = {
