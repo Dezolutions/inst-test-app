@@ -9,14 +9,15 @@ const PostList :React.FC = () => {
   React.useEffect(():void => {
     const fetchPosts = async () => {
       const IdInst = '17841405670639911'
-      const accessToken = 'EAAR7V5wR3gYBAOh1r7vE6YZA6n0YZB8R6spNW1Ia2ZCpNaBaPpso92YAG9T6bweTxfEraZBm32AdlT0FvZCQF1yj1YliS6pKTZBDxjZBbk7w3u6Hie8yz8D85ucaalCyPYtvWhZAINs0xNYry8SF5HK8r4N6kuAsDL0s3ZBI2OHrnqZBobKmI6bR3wF2x182YMiNzkWghldq8jsEFPpGjE5tmv'
-      const {data: {username,media: {data}}} = await axios.get(`https://graph.facebook.com/v11.0/${IdInst}?fields=username,followers_count,media_count,media{comments_count,like_count,media_url,caption}&access_token=${accessToken}`)   
+      const accessToken = 'EAAR7V5wR3gYBAHE2NHcXOpzZAhYZB1M1AANeGYa3wcJ9dS51jKdpnYH0KdBbMmesJGEfB5g0O2H52bRVc6XDioAwmimX93CvuicoOum3UsMukl8zXQ4uTGsN2ZApZAkNG5SnyOlaE47ia7MVoxacL4YBoIYlIE7QeycZBFJcDf1ZAewRSSZAkZBdi8SQEbXRoDZBtpw3YhnCiHf7LkOlrfClH'
+      const {data: {username,media: {data}}} = await axios.get(`https://graph.facebook.com/v11.0/${IdInst}?fields=username,followers_count,media_count,media{comments_count,like_count,media_url,caption,comments}&access_token=${accessToken}`)   
       setName(username)
       setPosts(data)
       
     }
     fetchPosts()
   },[])
+  console.log(posts)
   return (
     <>
     <h1>{name}</h1>
