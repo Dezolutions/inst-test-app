@@ -1,4 +1,4 @@
-export type TPost = {
+export interface IPost  {
   id: number,
   media_url: string,
   like_count?: number,
@@ -6,27 +6,27 @@ export type TPost = {
   caption?: string
 }
 
-export type TComment = {
+export interface IComment  {
   id: string,
   text: string,
   timestamp: string
 }
 export interface IComments {
-  data: {data:TComment[]}
+  data: {data:IComment[]}
 }
 
-export type TPostPage = {
+export interface IPostPage  {
   media_url: string,
   caption: string
 }
 
-export interface IPostPage {
-  data: TPostPage
+export interface IPostPageData {
+  data: IPostPage
 }
 
 export interface IPosts {
   data: {
     username: string,
-    media: {data:TPost[]}
+    media: {data:IPost[]}
   }
 }

@@ -11,7 +11,7 @@ const App :React.FC = () => {
     <div>
       <Router>
         <Switch>
-          <Route exact path='/inst-test-app' component={() => <PostList/>} />
+          <Route exact path='/inst-test-app' component={PostList} />
           <Route exact path='/pages/:postId' component={PostPage} />
         </Switch>
 
